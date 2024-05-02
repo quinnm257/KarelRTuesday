@@ -49,6 +49,16 @@ module SensorPack
    end
    return true
   end
+
+   def front_is_blocked?
+   begin
+     @direction.next_street(@street, @avenue)
+     @direction.next_avenue(@street, @avenue)
+   rescue FrontIsBlocked
+     return true
+   end
+   return false
+  end
   
  # Return true if the robot on a corner with at least one other robot
    def next_to_a_robot?
