@@ -10,11 +10,10 @@ include SensorPack
 include Turner
 
 def move
+
 if front_is_clear?
 	super
-	if next_to_a_beeper?
-	pick_beeper
-end
+
 elsif facing_north?
 	turn_right
 	if front_is_clear?
@@ -23,6 +22,7 @@ elsif facing_north?
 	else
 		turn_right
 	end
+
 elsif facing_south?
 	turn_left
 	if front_is_clear?
@@ -32,6 +32,11 @@ elsif facing_south?
 		turn_left
 	end	
 end
+
+if next_to_a_beeper?
+	pick_beeper
+end
+
 end
 
 def corner
@@ -60,21 +65,10 @@ else
 end
 turn_left
 
-if n == 1 and w == 1
+if n+s+w+e == 2
 	put_beeper
 	put_beeper
-end
-if w == 1 and s == 1
-	put_beeper
-	put_beeper
-end
-if n == 1 and  e == 1
-	put_beeper
-	put_beeper
-end
-if e == 1 and s == 1
-	put_beeper
-	put_beeper
+
 end
 end
 
