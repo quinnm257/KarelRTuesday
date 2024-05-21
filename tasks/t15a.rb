@@ -14,4 +14,4 @@ puts matrice1.sort.first+matrice2.sort.first #question 4
 
 puts (matrice1+matrice2).sort.first #question 5
 
-puts (matrice1+matrice2) #question 6
+puts (matrice1+matrice2).sort #question 6
