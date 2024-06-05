@@ -7,5 +7,7 @@ end
 moyenne = moyenne/notes.length
 
 puts "la moyenne est #{moyenne}"
+puts "la valeur minimum est #{notes.min}"
+puts "la valeur maximale est #{notes.max}"
 
 
