@@ -22,4 +22,13 @@ utilisateurs = {
   "user20" => "password20"
 }
 
+puts "nom d'utilisateur"
+user = gets.chomp.to_s
+puts "mot de passe"
 password = gets.chomp.to_s
+
+if utilisateurs[user] == password
+  puts "Accès autorisé"
+else
+  puts "Accès refusé"
+end
