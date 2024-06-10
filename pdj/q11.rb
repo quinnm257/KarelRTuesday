@@ -4,12 +4,12 @@ valeur = gets.chomp.to_i
 arr = []
 
 def prime?(a)
-	(2..a).each do |i|
-		until a == i
-			if a % i == 0 
-				return false
-			end
+	i=2
+	while i < a
+		if a % i == 0 
+			return false
 		end
+		i=i+1
 	end
 	return true
 end
@@ -20,8 +20,7 @@ end
   end
 end
 
-puts "les nombres primes sont: #{arr}"
-
+puts "les nombres permiers sont: #{arr}"
 
 
 
